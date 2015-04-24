@@ -1,4 +1,4 @@
-# CentOS7 with Squid Proxy
+# CentOS7 with miniDLNA
 
 ### Packages installed
 > minidlna 1.1.4-static
