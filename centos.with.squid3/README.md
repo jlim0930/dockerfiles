@@ -29,13 +29,13 @@ centos7             7.1.1503            07fad1e7cf50        21 minutes ago      
 
 ### Using
 - bind squid.conf in container and keep logs and cache inside the container
-- -- benefits: keeps everything portable however the container might get big due to logs and cache
+- benefits: keeps everything portable however the container might get big due to logs and cache
 ```sh
 docker run -d -p 8080:3128 --volume /datastore01/dockerfiles/centos.with.squid3/squid.conf:/etc/squid/squid.conf centos7:squid
 ```
 
 - bind squid.conf in container and keep logs and cache in /datastore01/docker-data/squid/
-- -- benefits: keeps the container portable however the logs and the cache can be easily accessed and the container will remain small.
+- benefits: keeps the container portable however the logs and the cache can be easily accessed and the container will remain small.
 ```sh
 docker run -d -p 8080:3128 --volume /datastore01/dockerfiles/centos.with/squid3/squid.conf:/etc/squid/squid.conf --volume /datstore01/docker-data/centos.with.squid3/cache:/var/spool/squid --volume /datastore01/docker-data/centos.with.squid3/logs:/var/log/squid centos7:squid 
 ```
